@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/App.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1646526091813,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1646526140926,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n function App() {\n   return (\n     <div className=\"App\">\n-      <h1>Ganhamo</h1>\n+      <h1>Eles tira onda, nois tiramo tsunami</h1>\n     </div>\n   );\n }\n \n"
+                },
+                {
+                    "date": 1646526148291,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n function App() {\n   return (\n     <div className=\"App\">\n-      <h1>Eles tira onda, nois tiramo tsunami</h1>\n+      <h1>eles tira onda, nois tiramo tsunami</h1>\n     </div>\n   );\n }\n \n"
+                }
+            ],
+            "date": 1646526091813,
+            "name": "Commit-0",
+            "content": "function App() {\n  return (\n    <div className=\"App\">\n      <h1>Ganhamo</h1>\n    </div>\n  );\n}\n\nexport default App;\n"
+        }
+    ]
+}
