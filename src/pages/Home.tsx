@@ -2,6 +2,8 @@ import illustrationBanner from '../assets/images/banner-aside.svg';
 import logoImage from '../assets/images/logo.svg';
 import logoGoogle from '../assets/images/icons/logo-google.svg';
 
+import { Button } from '../components/Button';
+
 import '../styles/auth.scss';
 
 export function Home() {
@@ -27,9 +29,9 @@ export function Home() {
                             type="text"
                             placeholder="Digite o código da sala"
                         />
-                        <button type="submit">
+                        <Button>
                             Entrar na sala
-                        </button>
+                        </Button>
                     </form>
                 </div>
             </main>
