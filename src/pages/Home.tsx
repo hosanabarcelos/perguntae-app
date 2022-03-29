@@ -1,18 +1,27 @@
 import { useNavigate } from 'react-router-dom';
 
+import { useAuth } from '../hooks/useAuth';
+
 import illustrationBanner from '../assets/images/banner-aside.svg';
 import logoImage from '../assets/images/logo.svg';
 import logoGoogle from '../assets/images/icons/logo-google.svg';
 
 import { Button } from '../components/Button';
 
+
 import '../styles/auth.scss';
 
 export function Home() {
 
     const navigate = useNavigate();
+    const { signInWithGoogle, user } = useAuth();
 
-    function navigateToNewRoom() {
+    async function handleCreateNewRoom() {
+        if (!user) {
+            await signInWithGoogle()
+        }
+
+
         navigate('/rooms/new');
     }
 
@@ -26,7 +35,7 @@ export function Home() {
             <main>
                 <div className="main-content">
                     <img src={logoImage} alt="Logo do Perguntae" />
-                    <button onClick={navigateToNewRoom} className="button-create-room">
+                    <button onClick={handleCreateNewRoom} className="button-create-room">
                     <img src={logoGoogle} alt="Ilustração" />
                         Crie sua sala com o Google
                     </button>
