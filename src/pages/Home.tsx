@@ -20,8 +20,8 @@ export function Home() {
         if (!user) {
             await signInWithGoogle()
         }
-
-
+        
+        //só executa em caso de sucesso 
         navigate('/rooms/new');
     }
 
