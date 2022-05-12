@@ -31,7 +31,7 @@ export function AdminRoom() {
             endedAt: new Date(),
         })
 
-        navigate('/');
+        navigate('/home');
     }
 
     async function handleDeleteQuestion(questionId: string) {

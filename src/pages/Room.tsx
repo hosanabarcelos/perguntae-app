@@ -1,6 +1,6 @@
 import { FormEvent, useState } from 'react';
 
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 
 import { Button } from '../components/Button';
 import { RoomCode } from '../components/RoomCode';
@@ -20,13 +20,22 @@ type RoomParams = {
 }
 
 export function Room() {
-    const { user } = useAuth();
+    const navigate = useNavigate();
+    const { signInWithGoogle, user } = useAuth();
     const params = useParams<RoomParams>();
     const [newQuestion, setNewQuestion] = useState('');
     const roomId = params.id!;
 
     const {  questions, title } = useRoom(roomId);
 
+    async function SignInUser() {
+        if (!user) {
+            await signInWithGoogle()
+        }
+    }
+    async function handleJoinHome() {
+        navigate('/home');
+    }
 
     async function handleSendQuestion(event: FormEvent ) {
         event.preventDefault();
@@ -71,7 +80,10 @@ export function Room() {
             <header>
                 <div className="content">
                     <img src={logoImg} alt="Logo Perguntae" />
-                    <RoomCode code={roomId} />
+                    <div>
+                        <RoomCode code={roomId} />
+                        <Button onClick={handleJoinHome}>Sair da sala</Button>
+                    </div>
                 </div>
             </header>
 
@@ -96,7 +108,7 @@ export function Room() {
                                 <span>{user.name}</span>
                             </div>
                         ) : (
-                            <span>Para enviar uma pergunta, <button>faça seu login.</button></span>
+                            <span>Para enviar uma pergunta, <button onClick={SignInUser}>faça seu login.</button></span>
                             ) 
                         }
                         <Button type="submit" disabled={!user}>Enviar pergunta</Button> 

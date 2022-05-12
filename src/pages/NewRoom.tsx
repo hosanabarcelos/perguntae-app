@@ -1,7 +1,7 @@
 import { FormEvent, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
-import illustrationBanner from '../assets/images/banner-aside.svg';
+import illustrationBanner from '../assets/images/idea.svg';
 import logoImage from '../assets/images/logo.svg';
 
 // import { useAuth } from '../hooks/useAuth';
@@ -57,7 +57,7 @@ export function NewRoom() {
                         </Button>
                     </form>
                     <p>
-                        Quer entrar em uma sala já existente? <Link to="/">clique aqui</Link>
+                        Quer entrar em uma sala já existente? <Link to="/home">clique aqui</Link>
                     </p>
                 </div>
             </main>

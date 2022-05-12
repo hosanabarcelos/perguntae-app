@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import { FormEvent, useState } from 'react';
 
-import illustrationBanner from '../assets/images/banner-aside.svg';
+import illustrationBanner from '../assets/images/idea.svg';
 import logoImage from '../assets/images/logo.svg';
 import logoGoogle from '../assets/images/icons/logo-google.svg';
 
