@@ -79,10 +79,10 @@ export function Room() {
         <div id="page-room">
             <header>
                 <div className="content">
-                    <img src={logoImg} alt="Logo Perguntae" />
+                    <img src={logoImg} alt="Logo Perguntae" className="logo"/>
                     <div>
                         <RoomCode code={roomId} />
-                        <Button onClick={handleJoinHome}>Sair da sala</Button>
+                        <Button onClick={handleJoinHome} id="button_close-b">Sair da sala</Button>
                     </div>
                 </div>
             </header>
@@ -111,7 +111,7 @@ export function Room() {
                             <span>Para enviar uma pergunta, <button onClick={SignInUser}>faça seu login.</button></span>
                             ) 
                         }
-                        <Button type="submit" disabled={!user}>Enviar pergunta</Button> 
+                        <Button type="submit" disabled={!user} id="send_question">Enviar pergunta</Button> 
                     </div>
                 </form>
                         
@@ -139,6 +139,11 @@ export function Room() {
                 })}
                 </div>
             </main>
+            <footer className="footer">
+                <div className="footer_div">
+                <Button onClick={handleJoinHome} id="button_close-e">Sair da sala</Button>
+                </div>
+            </footer>
         </div>
     );
 }
