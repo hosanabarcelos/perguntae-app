@@ -28,3 +28,21 @@
         cursor: not-allowed;
     }
 }
+
+#button_close-e {
+    display: none;
+}
+
+@media screen and (max-width: 920px) {
+    #button_close-b {
+        display: none;
+    }
+    #button_close-e {
+        display: block;
+        margin: auto;
+    }
+    #send_question {
+        width: 8rem;
+        margin-left: 0.8rem;
+    }
+}

@@ -61,7 +61,7 @@
           resize: vertical;
           min-height: 130px;
         }
-  
+        
         .form-footer {
           display: flex;
           justify-content: space-between;
@@ -108,3 +108,50 @@
       }
     }
   }
+
+@media screen and  (max-width: 920px) {
+    .logo {
+      display: none;
+    }
+    #page-room main .room-title span {
+        padding: 8px 0;
+        text-align: center;
+        width: 160px;
+        margin-right: 1.2rem;
+    }
+    #page-room header .content{
+        justify-content: center;
+    }
+    .room-title {
+      justify-content: center;
+    }
+    #page-room main .room-title h1 {
+      margin-left: 1.2rem;
+      font-size: 1.2rem;
+      text-align: center;
+    }
+    .question {
+      margin: 0 1.1rem;
+    }
+    .footer_div {
+      margin-bottom: 2vh;
+      margin-top: 1.5vh;
+    }
+    .footer {
+      bottom: 0;
+      width: 100vw;
+      position: sticky;
+      background-color: #F1F1F1;
+      padding: 0.1rem 0;
+    }
+    #page-room main form textarea{
+      width: 90%;
+      margin: 0 1.2rem;
+    }
+    #page-room main form .form-footer .user-info {
+      margin-left: 0.4rem;
+    }
+    #page-room main form .form-footer {
+      margin: 1rem 1.6rem 0 1.6rem;
+    }
+}

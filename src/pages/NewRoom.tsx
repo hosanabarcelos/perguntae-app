@@ -37,7 +37,8 @@ export function NewRoom() {
     return (
         <div id="page-auth">
             <aside>
-                <img src={illustrationBanner} alt="Ilustração" />
+                <img src={logoImage} alt="Logo do Perguntae" className="logo--responsivity" />
+                <img src={illustrationBanner} alt="Ilustração" className="ilustration-banner--responsivity" />
                 <strong>Na dúvida, Perguntaê!</strong>
                 <p>Tire as dúvidas da sua audiência em tempo real.</p>
             </aside>

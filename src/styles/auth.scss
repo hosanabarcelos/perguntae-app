@@ -19,6 +19,10 @@
             max-width: 400px;
         }
 
+        .logo--responsivity{
+            display: none;
+        }
+
         strong {
             font-size: 38px;
             font-weight: 700;
@@ -141,5 +145,61 @@
             background: #035397;
             margin-left: 16px;
         }
-    }
+    }  
+}
+
+@media screen and (max-width: 920px) {
+    #page-auth {
+        flex-direction: column;
+        justify-items: center;
+            /*começo da pg criar nova sala*/
+            .main-content h2 {
+                font-size: 1.4rem;
+                margin: 24px 0 24px;
+            }
+            .main-content p {
+                font-size: 0.8rem;
+            }
+            /*fim da pg criar nova sala*/
+            main img {
+                display: none;
+            }
+            .button-create-room {
+                margin-top: 25px;
+                height: 40px;
+            }
+            main {
+                align-items: initial;
+            }
+            .separator {
+                margin: 20px 0;
+            }
+            .main-content form input, .button {
+                height: 40px;
+            }
+            aside {
+                align-items: center;
+                padding: 35px 20px;
+                
+
+                .ilustration-banner--responsivity {
+                    display: none;
+                }
+                
+                .logo--responsivity{
+                    display: inline-block;
+                    
+                    max-width: 100px;
+                    max-height: 100px;
+                }
+                strong {
+                    font-size: 1.4rem;
+                    text-align: center;
+                }
+                p {
+                    font-size: 1.1rem;
+                    text-align: center;
+                }           
+            }
+        }
 }

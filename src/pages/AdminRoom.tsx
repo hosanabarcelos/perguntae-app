@@ -45,10 +45,10 @@ export function AdminRoom() {
         <div id="page-room">
             <header>
                 <div className="content">
-                    <img src={logoImg} alt="Logo Perguntae" />
+                    <img src={logoImg} alt="Logo Perguntae" className="logo" />
                     <div>
-                        <RoomCode code={roomId} />
-                        <Button onClick={handleEndRoom}>Encerrar sala</Button>
+                        <RoomCode code={roomId}  />
+                        <Button onClick={handleEndRoom} id="button_close-b">Encerrar sala</Button>
                     </div>
                 </div>
             </header>
@@ -78,6 +78,11 @@ export function AdminRoom() {
                 })}
                 </div>
             </main>
+            <footer className="footer">
+                <div className="footer_div">
+                    <Button id="button_close-e" onClick={handleEndRoom}>Encerrar sala</Button>
+                </div>
+            </footer>
         </div>
     );
 }
