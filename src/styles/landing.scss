@@ -20,6 +20,10 @@
             margin-right: 50px;
             flex-direction: column;
 
+            .logo-up {
+                display:none;
+            }
+
             .buttons {
                 display: flex;
                 gap: 16px;
@@ -50,4 +54,46 @@
 .info-section {
     display: flex;
     flex-direction: column;
+}
+
+@media screen and (max-width: 920px) {
+    .master-content .content .left-content p {
+        display: none;
+    }
+
+    .master-content .content .right-content img {
+        display: none;
+    }
+
+    .master-content {
+        background-position-x: -173px;
+    }
+    .master-content .content .left-content .logo-up {
+        display: initial;
+
+        width: 0 auto;
+        height: 30vh;
+    }
+    .master-content .content .right-content {
+        display: none;
+    }
+    .master-content .content .left-content h1 {
+        font-size: 2.3rem;
+        margin-top: 2.3rem;
+    }
+    .master-content .content .left-content .buttons {
+        flex-direction: column;
+        margin-top: 1.4rem;
+    }
+    .button {
+        padding: 1rem 1rem;
+    }
+    .master-content .content .left-content {
+        margin-right: 0;
+        text-align: center;
+    }
+    
+    .master-content .content {
+        justify-content: center;
+    }
 }

@@ -16,6 +16,7 @@ export function Landing() {
             <div className="master-content">
                 <div className="content">
                     <div className="left-content">
+                        <img src={logoImg} alt="logo" className="logo-up"/>
                         <h1>Na dúvida, Perguntaê!</h1>
                         <p>Crie salas e aumente a participação<br /> da sua audiência, de maneira interativa.</p>
                         <div className="buttons">
