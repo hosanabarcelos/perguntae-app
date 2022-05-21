@@ -117,7 +117,6 @@
         padding: 8px 0;
         text-align: center;
         width: 160px;
-        margin-right: 1.2rem;
     }
     #page-room header .content{
         justify-content: center;
@@ -126,7 +125,6 @@
       justify-content: center;
     }
     #page-room main .room-title h1 {
-      margin-left: 1.2rem;
       font-size: 1.2rem;
       text-align: center;
     }
@@ -153,5 +151,8 @@
     }
     #page-room main form .form-footer {
       margin: 1rem 1.6rem 0 1.6rem;
+    }
+    #page-room main .room-title {
+      margin: 32px 1.2rem 24px 1.2rem;
     }
 }
